@@ -3,7 +3,7 @@ spring:
     name: user-service
 
   datasource:
-    url: jdbc:postgresql://casalocal.com:5432/microchat
+    url: jdbc:postgresql://localhost:5432/microchat
     username: casaos
     password: casaos
     driver-class-name: org.postgresql.Driver
