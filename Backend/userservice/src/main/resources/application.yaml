@@ -1,0 +1,39 @@
+spring:
+  application:
+    name: user-service
+
+  datasource:
+    url: jdbc:postgresql://casalocal.com:5432/microchat
+    username: casaos
+    password: casaos
+    driver-class-name: org.postgresql.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+
+  cloud:
+    consul:
+      host: localhost  # Consul agent host
+      port: 8500       # Consul agent port
+      discovery:
+        enabled: true
+        service-name: ${spring.application.name}
+        health-check-interval: 10s  # Health check interval
+
+server:
+  port: 8081
+
+logging:
+  level:
+    root: INFO
+    com.microchat.userservice: DEBUG
+
+# JWT configuration (optional, if using JWT for authentication)
+jwt:
+  secret: mySecretKey
+  expirationMs: 3600000  # 1 hour
