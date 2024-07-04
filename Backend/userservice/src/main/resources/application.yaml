@@ -32,8 +32,6 @@ logging:
   level:
     root: INFO
     com.microchat.userservice: DEBUG
-    org.hibernate: DEBUG
-    org.springframework: DEBUG
 
 # JWT configuration (optional, if using JWT for authentication)
 jwt:
