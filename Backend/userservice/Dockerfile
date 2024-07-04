@@ -18,7 +18,7 @@ COPY --from=build /app/target/UserMicroservice.jar UserMicroservice.jar
 COPY --from=build /app/src/main/resources/application.yaml src/main/resources/application.yaml
 
 # Expose the port that your Spring Boot application uses (if necessary)
-EXPOSE 8080
+EXPOSE 8081
 
 # Command to run on container startup
 CMD ["java", "-jar", "UserMicroservice.jar"]
