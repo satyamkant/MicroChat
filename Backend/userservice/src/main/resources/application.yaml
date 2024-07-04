@@ -16,14 +16,14 @@ spring:
       hibernate:
         dialect: org.hibernate.dialect.PostgreSQLDialect
 
-  cloud:
-    consul:
-      host: localhost  # Consul agent host
-      port: 8500       # Consul agent port
-      discovery:
-        enabled: true
-        service-name: ${spring.application.name}
-        health-check-interval: 10s  # Health check interval
+  #cloud:
+    #consul:
+      #host: localhost  # Consul agent host
+      #port: 8500       # Consul agent port
+      #discovery:
+        #enabled: true
+        #service-name: ${spring.application.name}
+        #health-check-interval: 10s  # Health check interval
 
 server:
   port: 8081
