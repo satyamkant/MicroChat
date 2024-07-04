@@ -1,0 +1,15 @@
+version: '3.8'
+
+services:
+  myapp:
+    image: myapp:latest
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/microchat
+      SPRING_DATASOURCE_USERNAME: casaos
+      SPRING_DATASOURCE_PASSWORD: casaos
+      CONSUL_HOST: consul
+
+networks:
+  default:
+    external:
+      name: project
