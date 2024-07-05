@@ -6,9 +6,8 @@ import lombok.*;
 @Entity
 @Table(name = "users")
 @AllArgsConstructor
-@Getter
-@Setter
-@ToString
+@NoArgsConstructor
+@Data
 public class User {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
